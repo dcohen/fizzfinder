@@ -5,7 +5,7 @@ var app = angular.module('fizzfinder', ['addCtrl', 'queryCtrl', 'geolocation', '
     .config(function($routeProvider){
 
         // Join Team Control Panel
-        $routeProvider.when('/join', {
+        $routeProvider.when('/add', {
             controller: 'addCtrl', 
             templateUrl: 'partials/addForm.html',
 
@@ -15,5 +15,5 @@ var app = angular.module('fizzfinder', ['addCtrl', 'queryCtrl', 'geolocation', '
             templateUrl: 'partials/queryForm.html',
 
             // All else forward to the Join Team Control Panel
-        }).otherwise({redirectTo:'/join'})
+        }).otherwise({redirectTo:'/add'})
     });

@@ -2,14 +2,15 @@
 <html class="no-js" ng-app="fizzfinder">
 <head>
     <meta charset="utf-8">
-    <title>Scotch MEAN Map</title>
+    <title>FizzFinder</title>
     <meta name="description" content="An example demonstrating Google Map integration with MEAN Apps">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="style.css"/>
     <!-- Google Maps API -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATcoBAVVKvh6wyuZMLv_JurtrWIf3sScQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATcoBAVVKvh6wyuZMLv_JurtrWIf3sScQ&libraries=places"></script>
+    
     <!-- JS Source -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -31,10 +32,10 @@
     <div class="header">
         <ul class="nav nav-pills pull-right">
             <!-- Links to the two menu views included -->
-            <li active><a href="/#/join">Join the Team</a></li>
-            <li disabled><a href="/#/find">Find Teammates</a></li>
+            <li active><a href="/#/add">Add a Fizz</a></li>
+            <li disabled><a href="/#/find">Find a Fizz</a></li>
         </ul>
-        <h3 class="text-muted">The Scotch MEAN MapApp</h3>
+        <h3 class="text-muted">FizzFinder</h3>
     </div>
     <!-- Map and Side Panel -->
     <div class="row content">
@@ -49,8 +50,8 @@
     <hr/>
     <!-- Footer -->
     <div class="footer">
-        <p class="text-center"><span class="glyphicon glyphicon-check"></span> Created by Ahmed Haque for Scotch IO -
-            <a href="https://scotch.io/">App Tutorial</a> | <a href="https://github.com/afhaque/MeanMapAppV2.0">Github Repo</a></p>
+        <p class="text-center">
+            <a href="https://www.github.com/dcohen/fizzfinder/">FizzFinder on Github</a> | <a href="/#/about">About FizzFinder | <a href="http://www.nowfizzing.com">Now Fizzing</a></a></p>
     </div>
 </div>
 </body>

@@ -8,7 +8,7 @@
 
         <!-- Panel Title -->
         <div class="panel-heading">
-            <h2 class="panel-title text-center">Find Teammates! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
+            <h2 class="panel-title text-center">Find a Fizz Near You</h2>
         </div>
 
         <!-- Panel Body -->
@@ -31,8 +31,7 @@
                     <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
                 </div>
 
-                <!-- Note ng-true-value which translates check values into explicit gender strings -->
-                <label>Gender</label>
+                <label>Brand</label>
                 <div class="form-group">
                     <label class="checkbox-inline">
                         <input type="checkbox" name="optionsRadios" id="checkpolar" value="Polar" ng-model="formData.brand" ng-true-value = "'Polar'">
@@ -60,7 +59,7 @@
 
         <!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
         <div ng-show="queryCount>0" class="panel-footer">
-            <p class="text-center">Hot Dang! We Found {{queryCount}} Teammates.</p>
+            <p class="text-center">{{ queryCount}} Matching Fizzes Found!</p>
         </div>
     </div>
 </div>

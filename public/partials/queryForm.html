@@ -1,0 +1,66 @@
+<!-- queryForm.html -->
+
+<!-- Find Teammates (Query) Form -->
+<div class="col-md-5">
+
+    <!-- Creates Main Panel -->
+    <div class="panel panel-default">
+
+        <!-- Panel Title -->
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">Find Teammates! (Map Query) <span class="glyphicon glyphicon-search"></span></h2>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="panel-body">
+
+            <!-- Creates Form -->
+            <form name ="queryForm">
+
+                <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+                <div class="form-group">
+                    <label for="latitude">Your Latitude</label>
+                    <input type="text" class="form-control" id="latitude" placeholder="39.5" ng-model="formData.latitude" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Your Longitude</label>
+                    <input type="text" class="form-control" id="longitude" placeholder="-98.35" ng-model="formData.longitude" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="distance">Max. Distance (miles)</label>
+                    <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
+                </div>
+
+                <!-- Note ng-true-value which translates check values into explicit gender strings -->
+                <label>Gender</label>
+                <div class="form-group">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checkpolar" value="Polar" ng-model="formData.brand" ng-true-value = "'Polar'">
+                        Polar
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checktopochico" value="Topo Chico" ng-model="formData.brand" ng-true-value="'Topo Chico'">
+                        Topo Chico
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" name="optionsRadios" id="checksanavi" value="Sanavi" ng-model="formData.brand" ng-true-value="'Sanavi'">
+                        Sanavi
+                    </label>
+                </div>
+  
+                <div class="form-group">
+                    <label for="flavor">Flavor</label>
+                    <input type="text" class="form-control" id="favlang" placeholder="Ghost" ng-model="formData.flavor">
+                </div>
+
+                <!-- Query button. Note that its tied to queryUsers() function from queryCtrl.  -->
+                <button type="submit" class="btn btn-danger btn-block" ng-click="queryUsers()">Search</button>
+            </form>
+        </div>
+
+        <!-- Footer panel for displaying count. Note how it will only display if queryCount is greater than 0 -->
+        <div ng-show="queryCount>0" class="panel-footer">
+            <p class="text-center">Hot Dang! We Found {{queryCount}} Teammates.</p>
+        </div>
+    </div>
+</div>

@@ -28,28 +28,15 @@
                 </div>
                 <div class="form-group">
                     <label for="distance">Max. Distance (miles)</label>
-                    <input type="text" class="form-control" id="distance" placeholder="500" ng-model="formData.distance">
+                    <input type="text" class="form-control" id="distance" placeholder="" ng-model="formData.distance">
                 </div>
-
-                <label>Brand</label>
                 <div class="form-group">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checkpolar" value="Polar" ng-model="formData.brand" ng-true-value = "'Polar'">
-                        Polar
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checktopochico" value="Topo Chico" ng-model="formData.brand" ng-true-value="'Topo Chico'">
-                        Topo Chico
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" name="optionsRadios" id="checksanavi" value="Sanavi" ng-model="formData.brand" ng-true-value="'Sanavi'">
-                        Sanavi
-                    </label>
+                    <label for="brand">Seltzer Brands Sold</label>
+                    <input type="text" class="form-control" id="brand" placeholder="" ng-model="formData.brand">
                 </div>
-  
                 <div class="form-group">
-                    <label for="flavor">Flavor</label>
-                    <input type="text" class="form-control" id="favlang" placeholder="Ghost" ng-model="formData.flavor">
+                    <label for="flavor">Notable Flavors</label>
+                    <input type="text" class="form-control" id="favlang" placeholder="" ng-model="formData.flavor">
                 </div>
 
                 <!-- Query button. Note that its tied to queryUsers() function from queryCtrl.  -->

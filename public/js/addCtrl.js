@@ -10,12 +10,18 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
     var lat = 0;
     var long = 0;
 
-    // Set initial coordinates to the center of the US
-    $scope.formData.latitude = 39.500;
-    $scope.formData.longitude = -98.350;
-
     // Functions
     // ----------------------------------------------------------------------------
+    
+    // Get User's actual coordinates based on HTML5 at window load
+    geolocation.getLocation().then(function(data){
+        coords = {lat:data.coords.latitude, long:data.coords.longitude};
+
+    // Set the latitude and longitude equal to the HTML5 coordinates
+    $scope.formData.longitude = parseFloat(coords.long).toFixed(3);
+    $scope.formData.latitude = parseFloat(coords.lat).toFixed(3);
+    });
+
     
 		// Get coordinates based on mouse click. When a click event is detected....
 		$rootScope.$on("clicked", function(){

@@ -3,39 +3,25 @@
             <div class="panel panel-default">
                 <!-- Panel Title -->
                 <div class="panel-heading">
-                    <h2 class="panel-title text-center">Add a </h2>
+                    <h2 class="panel-title text-center">Add a Fizz</h2>
                 </div>
                 <!-- Panel Body -->
                 <div class="panel-body">
+										<p class="info">Click on a new location anywhere on the map and add details in the form below.</p>
                     <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
                     <form name ="addForm" novalidate>
                         <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
                         <div class="form-group">
                             <label for="storename">Store Name <span class="badge">All fields required</span></label>
-                            <input type="text" class="form-control" id="storename" placeholder="Wegmans" ng-model="formData.storename" required>
-                        </div>
-                        <label class="radio control-label">Brand</label>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="polar" value="Polar" ng-model="formData.brand">
-                                Polar
-                            </label>
-                        </div>
-                        <div class="radio" required>
-                            <label>
-                                <input type="radio" name="optionsRadios" id="topochico" value="Topo Chico" ng-model="formData.brand">
-                                Topo Chico
-                            </label>
-                        </div>
-                        <div class="radio">
-                            <label>
-                                <input type="radio" name="optionsRadios" id="sanavi" value="Sanavi" ng-model="formData.brand">
-                                Sanavi
-                            </label>
+                            <input type="text" class="form-control" id="storename" placeholder="" ng-model="formData.storename" required>
                         </div>
                         <div class="form-group">
-                            <label for="language">Flavor</label>
-                            <input type="text" class="form-control" id="flavor" placeholder="Ghost" ng-model="formData.flavor" required>
+                            <label for="brand">Seltzer Brands Sold</label>
+                            <input type="text" class="form-control" id="brand" placeholder="" ng-model="formData.brand" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Notable Flavors</label>
+                            <input type="text" class="form-control" id="flavor" placeholder="" ng-model="formData.flavor" required>
                         </div>
                         <div class="form-group">
                             <label for="latitude">Latitude</label>

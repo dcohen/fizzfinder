@@ -6,7 +6,7 @@ angular.module('gservice', [])
         // -------------------------------------------------------------
         // Service our factory will return
         var googleMapService = {};
-        
+
         // Handling Clicks and location selection
 				googleMapService.clickLat  = 0;
 				googleMapService.clickLong = 0;
@@ -101,7 +101,7 @@ var initialize = function(latitude, longitude, filter) {
 
         // Create a new map and place in the index.html page
         var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 8,
+            zoom: 10,
             center: myLatLng
         });
     }
@@ -139,10 +139,15 @@ var initialize = function(latitude, longitude, filter) {
         map: map,
         icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
     });
-    lastMarker = marker;
+    lastMarker = marker;google.maps
 
     // Function for moving to a selected location
     map.panTo(new google.maps.LatLng(latitude, longitude));
+
+  var input = document.getElementById('searchTextField');
+  var autocomplete = new google.maps.places.Autocomplete(input);
+
+google.maps.event.addDomListener(window, 'load', initialize);
 
     // Clicking on the Map moves the bouncing red marker
     google.maps.event.addListener(map, 'click', function(e){
